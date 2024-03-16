@@ -21,7 +21,6 @@ function Banque({ name, onClick }) {
         onChange={(e) => setBanque1(e.target.value)}
       />
       <button onClick={handleOperation}>{name}</button>
-     
     </div>
   );
 }

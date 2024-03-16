@@ -86,21 +86,18 @@ export default function App() {
   };
 
   return (
-    
     <div className="container">
-      <div className="image">
-        <img src={dollar} alt="" />
-      </div>
-     
       <div className="sold">
         <p>SOLD</p>
         <p>{compte}DA</p>
       </div>
 
       <div className="boxes">
+        <p id="dollar">DA</p>
         <Banque name="Deposer" onClick={handleOperation} />
         <Banque name="Retrait" onClick={handleOperation} />
         <Banque name="flixy" onClick={handleOperation} />
+        <p id="dollar">DA</p>
       </div>
     </div>
   );
