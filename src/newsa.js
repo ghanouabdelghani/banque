@@ -8,7 +8,7 @@ export default function newsa() {
         <Card
           key={index}
           name={users.username}
-          email={users.email}
+          // image={users.image}
           website={users.website}
         />
       ))}

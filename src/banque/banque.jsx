@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 function Banque({ name, onClick }) {
   const [banque1, setBanque1] = useState("");
 

@@ -2,15 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#btn1 {
-  width: 25px;
-  height: 25px;
-}
-#btn2 {
-  width: 25px;
-  height: 25px;
-}
-#btn3 {
-  width: 45px;
-  height: 30px;
+
+.btn{
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

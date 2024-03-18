@@ -1,40 +1,57 @@
 import React, { useState } from "react";
-
+import teaImage from "./teaimg.jpg";
+import capoimg from "./capoimg.avif";
+import espimg from "./espimg.jpg";
+import cofimg from "./cofimg.jpg";
 export default function Coffee() {
   const [coffee, setCoffee] = useState("");
   const [coffee1, setCoffee1] = useState("");
-  const drinks = ["coffee", "tea", "cappuccino", "espresso"];
+  const drinks = [
+    "tea",
+    <img id="img" src={teaImage} alt={teaImage} />,
+
+    "coffee",
+    <img id="img" src={cofimg} alt={teaImage} />,
+
+    "espresso",
+    <img id="img" src={espimg} alt={teaImage} />,
+    "cappuccino",
+    <img id="img" src={capoimg} alt={teaImage} />,
+  ];
   const boissons = () => {
-    if (drinks.includes(coffee)) setCoffee1(`vous avez choisi : ${coffee}`);
-    else setCoffee1(`votre demande : ${coffee} n'est pas disponible`);
+    if (drinks.includes(coffee)) {
+      setCoffee1(`Vous avez choisi : ${coffee}`);
+    } else {
+      setCoffee1(`Votre demande : ${coffee} n'est pas disponible`);
+    }
   };
 
   return (
     <>
+      <h1 id="name">CofeeShop</h1>
+
       <div className="map">
-        <h1>menu :</h1>
         {drinks.map((drink, index) => (
           <div key={index}>
             <p>{drink}</p>
           </div>
         ))}
       </div>
-      <h1>Coffee Shop</h1>
-      <p>Client</p>
-      {/* <p>{drinks}</p>
-      <p>{coffee1}</p> */}
-      <input
-        type="text"
-        placeholder="Enter your order"
-        value={coffee}
-        onChange={(e) => setCoffee(e.target.value)}
-      />
-      <button onClick={boissons}>Send</button>
-      <div className="serveur">
-        <h2>serveur</h2>
-        <p>{coffee1}</p>
+
+      <div className="header">
+        <p>Client</p>
+        <input
+          type="text"
+          placeholder="Enter your order"
+          value={coffee}
+          onChange={(e) => setCoffee(e.target.value)}
+        />
+        <button onClick={boissons}>Send</button>
       </div>
-          
+      <div className="serveur">
+        <h2 id="srv">Serveur</h2>
+        <p id="srv">{coffee1}</p>
+      </div>
     </>
   );
 }

@@ -73,50 +73,63 @@
 //     </>
 //   );
 // }
-// // // export default App;
-// // import React, { useState } from "react";
-// // import Banque from "./banque/banque";
-// // import "./App.css";
-// // import dollar from "./banque/Dollar_symbol_gold.svg.png";
+// // // // export default App;
+// import React, { useState } from "react";
+// import Banque from "./banque/banque";
+// import "./App.css";
+// import dollar from "./banque/Dollar_symbol_gold.svg.png";
 
-// // export default function App() {
-// //   const [compte, setCompte] = useState(20000);
+// export default function App() {
+//   const [compte, setCompte] = useState(20000);
+//   const handleOperation = (operation, amount) => {
+//     if (operation === "Deposer") {
+//       setCompte(compte + amount);
+//     } else if (operation === "Retrait" || operation === "flixy") {
+//       setCompte(compte - amount);
+//     }
+//   };
 
-// //   const handleOperation = (operation, amount) => {
-// //     if (operation === "Deposer") {
-// //       setCompte(compte + amount);
-// //     } else if (operation === "Retrait" || operation === "flixy") {
-// //       setCompte(compte - amount);
-// //     }
-// //   };
+//   return (
+//     <div className="container">
+//       <div className="sold">
+//         <p>SOLD</p>
+//         <p>{compte}DA</p>
+//       </div>
 
-// //   return (
-// //     <div className="container">
-// //       <div className="sold">
-// //         <p>SOLD</p>
-// //         <p>{compte}DA</p>
-// //       </div>
-
-// //       <div className="boxes">
-// //         <p id="dollar">DA</p>
-// //         <Banque name="Deposer" onClick={handleOperation} />
-// //         <Banque name="Retrait" onClick={handleOperation} />
-// //         <Banque name="flixy" onClick={handleOperation} />
-// //         <p id="da">DA</p>
-// //       </div>
-// //     </div>
-// //   );
-// // }
+//       <div className="boxes">
+//         <p id="dollar">DZD</p>
+//         <Banque name="Deposer" onClick={handleOperation} />
+//         <Banque name="Retrait" onClick={handleOperation} />
+//         <Banque name="flixy" onClick={handleOperation} />
+//         <p id="da">DZD</p>
+//       </div>
+//     </div>
+//   );
+// }
 
 import React from "react";
 import Coffee from "./cofee/cofee";
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="menu">
+      <h1 id="menu">menu :</h1>
       <Coffee />
-    </>
+    </div>
   );
 }
 
 export default App;
+// import React from "react";
+// import Cardsho from "./shopingCard/cardshoping";
+// import Shopping from "./shopingCard/shoping";
+
+// export default function App() {
+//   return (
+//     <div>
+//       <Cardsho />
+//       <Shopping />
+//     </div>
+//   );
+// }

@@ -12,7 +12,7 @@ function Cardsho({ name, imageUrl, price }) {
       <div className="cards">
         <p>name : {name}</p>
         <p>price: {price}</p>
-        {/* <p>{count1}</p> */}
+        <p>{count1}</p>
         <p>{count2}</p>
 
         {/* <img src={imageUrl} alt="product" /> */}
